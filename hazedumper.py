@@ -8,9 +8,12 @@ def dump():
         if "// " in line:
             if "UTC" in line:
                 line.replace("//", "# hazedumper timestamp")
+            else:
+                line = ''
         elif "constexpr ::std::ptrdiff_t " in line:
             line.replace("constexpr ::std::ptrdiff_t ", "")
-            line.replace(";", "")
+            line.replace(";", ")")
+            line.replace("= ", "= (")
         else:
             line = ''
     with open("csgo.py", "w") as hazedumper:
