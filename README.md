@@ -9,4 +9,4 @@ Using only modules from Python's default library.
  - Copy the hazedumper.py from the repository.
  - Import the module in your Python project.
  - Call the dump function.
- - Grab the offsets from the offsets.py file.
+ - Grab the offsets from the offsets.py file (example: from offsets import m_ArmorValue)
