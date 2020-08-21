@@ -10,3 +10,7 @@ Using only modules from Python's default library.
  - Import the module in your Python project.
  - Call the dump function.
  - Grab the offsets from the offsets.py file (example: from offsets import m_ArmorValue)
+ 
+## Contribution
+If you can contribute to this repository, you are welcome to do so. Just create a pull request.
+Or if you have any ideas for functions to implement, please make an issue with the tag enhancement.
