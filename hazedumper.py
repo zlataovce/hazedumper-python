@@ -1,10 +1,11 @@
 from urllib.request import urlretrieve
 import os
 
+
 def dump(debug=False):
     if os.path.exists("csgo.hpp"):
         os.remove("csgo.hpp")
-    
+
     if os.path.exists("offsets.py"):
         os.remove("offsets.py")
     urlretrieve("https://raw.githubuser"
@@ -56,5 +57,6 @@ def dump(debug=False):
             if debug:
                 print("Wrote an empty line!")
     offsets.close()
+
 
 dump(debug=False)
