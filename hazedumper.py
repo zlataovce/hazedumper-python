@@ -11,10 +11,8 @@ def dump():
         data = hazedumper.readlines()
     for line in data:
         if "constexpr ::std::ptrdiff_t " in line:
-            line = line.replace("constexpr ::std::ptrdiff_t ", "").replace(";", "").rstrip()
-            item_list = line.split(" = ")
+            line = line.replace("constexpr ::std::ptrdiff_t ", "")
+            item_list = line.replace(";", "").rstrip().split(" = ")
             offsets[item_list[0]] = item_list[1]
     os.remove("csgo.hpp")
     return offsets
-
-print(dump())
