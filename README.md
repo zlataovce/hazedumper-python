@@ -7,9 +7,17 @@ Using only modules from Python's default library.
 
 ## Usage
  - Copy the hazedumper.py from the repository.
- - Import the module in your Python project.
- - Call the dump function.
- - Grab the offsets from the offsets.py file (example: from offsets import m_ArmorValue)
+ - Run the dump function and grab the offsets from the returned dict.
+
+### Example
+```
+from hazedumper import dump
+
+offsets = dump()
+
+print("dwForceAttack: " + offsets["dwForceAttack"])
+print("m_iFOV: " + offsets["m_iFOV"])
+```
  
 ## Contribution
 If you can contribute to this repository, you are welcome to do so. Just create a pull request.
